@@ -1,0 +1,15 @@
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\bin\Debug\OrkApplication.exe.config
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\bin\Debug\OrkApplication.exe
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\bin\Debug\OrkApplication.pdb
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.csprojAssemblyReference.cache
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\MainWindow.g.cs
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\App.g.cs
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication_MarkupCompile.cache
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication_MarkupCompile.lref
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\MainWindow.baml
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.g.resources
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.Properties.Resources.resources
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.csproj.GenerateResource.cache
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.csproj.CoreCompileInputs.cache
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.exe
+C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.pdb
