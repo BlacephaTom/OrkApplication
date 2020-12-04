@@ -5,9 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using OrkApplication.Classes.OrkEventArgs;
 
+using OrkApplication.BaseApplicationClasses;
+
+using System.ComponentModel;
+
 namespace OrkApplication.Classes.SquadClasses
 {
-    public class BaseSquadClass
+    public class BaseSquadClass : UpdateUIClass
     {
         public delegate void TooManySquadMembers(object sender, TooManySquadMembersEventArgs e);
         public TooManySquadMembers delTooManySquadMembers;
@@ -19,6 +23,8 @@ namespace OrkApplication.Classes.SquadClasses
         public int CurrentSquadMembers { get; set; }
         public int MinimumSquadMembers { get; set; }
 
+
+        // TODO probably move this as doesn't belong here
         public virtual void AddSquadMember(int NumberOfSquadToAdd)
         {
             if (NumberOfSquadToAdd.WillSquadBeTooBig(CurrentSquadMembers, MaximumSquadMembers))
@@ -27,6 +33,7 @@ namespace OrkApplication.Classes.SquadClasses
             }
         }
 
+        // TODO probably move this as doesn't belong here
         public virtual void RemoveSquadMember(int NumberOfSquadToRemove)
         {
             if(CurrentSquadMembers - NumberOfSquadToRemove < 0)
