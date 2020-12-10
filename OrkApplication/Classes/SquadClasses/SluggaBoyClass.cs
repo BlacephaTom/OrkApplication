@@ -5,27 +5,38 @@ using System.Text;
 using System.Threading.Tasks;
 using OrkApplication.Classes.OrkEventArgs;
 
+using System.Collections;
+
 namespace OrkApplication.Classes.SquadClasses
 {
-    public class SluggaBoyClass
+    public class SluggaBoyClass : IComparable, IComparable<SluggaBoyClass>
     {
+        protected int BaseTenNumber;
+
         public string Name { get; set; }
-       
 
-        //public override void AddSquadMember(int NumberOfSquadToAdd)
-        //{
-        //    if(NumberOfSquadToAdd.WillSquadBeTooBig(CurrentSquadMembers, MaximumSquadMembers))
-        //    {
-        //        delTooManySquadMembers?.Invoke(this, new TooManySquadMembersEventArgs($"Slugga Boyz can only have {MaximumSquadMembers} Boyz, iz that not good enuf for ya!?"));
-        //    }
-        //}
 
-        //public override void RemoveSquadMember(int NumberOfSquadToRemove)
-        //{
-        //    if(CurrentSquadMembers.WillSquadBeTooSmall(CurrentSquadMembers, MinimumSquadMembers))
-        //    {
-        //        delTooFewSquadMembers?.Invoke(this, new TooFewSquadMembersEventArgs($"You need at least {MinimumSquadMembers} Slugga Boyz to make this mob wurk!"));
-        //    }
-        //}
+
+
+
+        public int CompareTo(object obj)
+        {
+
+            // negative if instance is less than passed in value
+            // 0 if equal
+            // positive if greater than value
+            SluggaBoyClass sluggaBoyClass = obj as SluggaBoyClass;
+            if (sluggaBoyClass != null)
+                return this.BaseTenNumber.CompareTo(sluggaBoyClass.BaseTenNumber);
+            else
+                throw new ArgumentException("Object passed through was not a Sluggs Boy");
+        }
+
+        public int CompareTo(SluggaBoyClass sluggaBoyClass)
+        {
+            // Compare this class with that of one passed in
+            return this.CompareTo(sluggaBoyClass);
+        }
+
     }
 }

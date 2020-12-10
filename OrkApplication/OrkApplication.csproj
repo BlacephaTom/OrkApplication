@@ -56,7 +56,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseApplicationClasses\UpdateUIClass.cs" />
+    <Compile Include="Classes\StaticReferences.cs" />
     <Compile Include="Models\SluggaBoyModel.cs" />
+    <Compile Include="ViewModels\ScreenViewModels\TroopsViewModel.cs" />
     <Compile Include="ViewModels\SluggaBoySquadViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +113,9 @@
   <ItemGroup>
     <Folder Include="BaseApplicationClasses\NewFolder1\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pictures\40kOrkHeader.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

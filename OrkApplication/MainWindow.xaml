@@ -4,12 +4,99 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrkApplication"
+        
+        xmlns:TroopViewModel="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel >
-            <Button Content="text"
-                    Click="Button_Click"/>
-        </StackPanel>
-    </Grid>
+        Title="MainWindow"
+        ResizeMode="CanResize"
+        Height="450"
+        Width="800">
+    <DockPanel LastChildFill="True">
+
+        <DockPanel.Background>
+            <ImageBrush ImageSource="Resources/Pictures/40kOrkHeader.jpg"
+                        Opacity="0.5"/>
+        </DockPanel.Background>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto"
+                      DockPanel.Dock="Right"
+                      MaxWidth="150"
+                      MinWidth="100">
+            <StackPanel>
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type TextBlock}"
+                           x:Key="SubtitleStyle">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Margin" Value="0,5,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock FontWeight="Bold"
+                           Margin="0,9,0,0"
+                           HorizontalAlignment="Center">
+                    <Span><Underline>Totals</Underline></Span>
+                </TextBlock>
+                <TextBlock Text="HQ"
+                           Style="{StaticResource SubtitleStyle}"/>
+                <StackPanel>
+                    <TextBlock Text="Ghazzkull Tharaka"/>
+                    <TextBlock HorizontalAlignment="Right"
+                               Text="136"/>
+                </StackPanel>
+                <TextBlock Text="Troops"
+                           Style="{StaticResource SubtitleStyle}"/>
+                <StackPanel>
+                
+                </StackPanel>
+                <TextBlock Text="Elites"
+                           Style="{StaticResource SubtitleStyle}"/>
+                <StackPanel>
+                    
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        
+        
+        <TabControl Background="{x:Null}"
+                    DockPanel.Dock="Left"
+                    BorderBrush="{x:Null}">
+            <TabItem Header="Troops">
+                <TabItem.DataContext>
+                    <TroopViewModel:TroopsViewModel/>
+                </TabItem.DataContext>
+                <StackPanel>
+                    <ComboBox ItemsSource="{Binding ListOfTroops}"
+                              SelectedValue="{Binding Path=SelectedTroop, 
+                                                        Mode=OneWayToSource, 
+                                                        UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                
+                
+                
+                
+                
+            </TabItem>
+            
+            
+            
+            <TabItem Header="Elite">
+
+            </TabItem>
+        </TabControl>
+
+
+       
+        <!--<StackPanel>
+            <Grid>
+                <Rectangle Height="175">
+                    <Rectangle.Fill>
+                        <ImageBrush 
+                    </Rectangle.Fill>
+                </Rectangle>
+                    
+                --><!--<Image Source="Resources/Pictures/40kOrkHeader.jpg"/>--><!--
+            </Grid>
+        </StackPanel>-->
+    </DockPanel>
 </Window>

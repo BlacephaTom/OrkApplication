@@ -11,6 +11,8 @@ using OrkApplication.Classes.OrkClasses;
 using OrkApplication.Classes.SquadClasses;
 using OrkApplication.BaseApplicationClasses;
 
+using System.Collections;
+
 namespace OrkApplication.ViewModels
 {
     public class SluggaBoySquadViewModel : BaseSquadClass
@@ -41,8 +43,5 @@ namespace OrkApplication.ViewModels
             get { return SluggaBoySquad.Where(Ork => Ork.Name == Name).FirstOrDefault(); }
             set { /* set the specified index to value here */ }
         }
-
-
-
     }
 }
