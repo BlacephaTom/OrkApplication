@@ -16,12 +16,14 @@ using System.Windows.Shapes;
 using OrkApplication.Classes.SquadClasses;
 using OrkApplication.Classes.OrkEventArgs;
 
+using MahApps.Metro.Controls;
+
 namespace OrkApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {

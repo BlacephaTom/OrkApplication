@@ -1,10 +1,10 @@
-﻿<Window x:Class="OrkApplication.MainWindow"
+﻿<mah:MetroWindow x:Class="OrkApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrkApplication"
-        
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:TroopViewModel="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
         
         mc:Ignorable="d"
@@ -58,32 +58,66 @@
         </ScrollViewer>
         
         
-        <TabControl Background="{x:Null}"
+        <mah:MetroTabControl Background="{x:Null}"
                     DockPanel.Dock="Left"
                     BorderBrush="{x:Null}">
-            <TabItem Header="Troops">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type mah:MetroTabItem}">
+                    <Setter Property="mah:HeaderedControlHelper.HeaderFontSize" Value="15"/>
+                </Style>
+            </TabControl.Resources>
+            <mah:MetroTabItem Header="Troops">
                 <TabItem.DataContext>
                     <TroopViewModel:TroopsViewModel/>
                 </TabItem.DataContext>
-                <StackPanel>
-                    <ComboBox ItemsSource="{Binding ListOfTroops}"
-                              SelectedValue="{Binding Path=SelectedTroop, 
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="Margin" Value="0,0,0,5"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Label Content="Squad Type"/>
+                        <ComboBox ItemsSource="{Binding ListOfTroops}"
+                                  SelectedValue="{Binding Path=SelectedTroop, 
                                                         Mode=OneWayToSource, 
                                                         UpdateSourceTrigger=PropertyChanged}"/>
-                </StackPanel>
-                
-                
-                
-                
-                
-            </TabItem>
-            
-            
-            
-            <TabItem Header="Elite">
 
-            </TabItem>
-        </TabControl>
+                        <Label Content="Number in Squad"/>
+                        <mah:NumericUpDown Maximum="{Binding Path=SquadMax, 
+                                                            Mode=OneWay}"
+                                           Minimum="{Binding Path=SquadMin,
+                                                            Mode=OneWay}"
+                                           Interval="1"
+                                           Background="{x:Null}"
+                                           Speedup="False"
+                                           InterceptMouseWheel="True"
+                                           HorizontalAlignment="Left"
+                                           Margin="0,0,0,5"/>
+                        <Label Content="Slugga Boy Nob"
+                               
+                               Opacity="100"/>
+                        <Label Content="War Gear"/>
+                    </StackPanel>
+                </Grid>
+               
+                
+                
+                
+                
+                
+            </mah:MetroTabItem>
+
+
+
+            <mah:MetroTabItem Header="Elite">
+
+            </mah:MetroTabItem>
+        </mah:MetroTabControl>
 
 
        
@@ -99,4 +133,4 @@
             </Grid>
         </StackPanel>-->
     </DockPanel>
-</Window>
+</mah:MetroWindow>

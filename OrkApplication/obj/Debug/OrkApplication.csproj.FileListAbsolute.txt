@@ -30,3 +30,15 @@ C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.P
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csproj.GenerateResource.cache
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csproj.CoreCompileInputs.cache
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\ControlzEx.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MahApps.Metro.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\ControlzEx.pdb
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\ControlzEx.xml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MahApps.Metro.pdb
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MahApps.Metro.xml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\App.baml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csproj.CopyComplete

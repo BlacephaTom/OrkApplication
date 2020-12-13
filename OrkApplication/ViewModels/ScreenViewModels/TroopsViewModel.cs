@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using OrkApplication.Classes;
+using OrkApplication.BaseApplicationClasses;
 
 namespace OrkApplication.ViewModels.ScreenViewModels
 {
     public class TroopsViewModel
     {
+        public CommandClass AddTroopToArmyICmd => new CommandClass(AddTroopToArmy);
+
 
         public List<string> ListOfTroops
         {
@@ -27,5 +30,10 @@ namespace OrkApplication.ViewModels.ScreenViewModels
         public string SelectedTroop { get; set; }
 
 
+        public void AddTroopToArmy()
+        {
+
+
+        }
     }
 }
