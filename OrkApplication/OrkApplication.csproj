@@ -72,8 +72,17 @@
     <Compile Include="BaseApplicationClasses\UpdateUIClass.cs" />
     <Compile Include="Classes\StaticReferences.cs" />
     <Compile Include="Models\SluggaBoyModel.cs" />
+    <Compile Include="Structs\HQStructs.cs" />
+    <Compile Include="ViewModels\ScreenViewModels\TotalsViewModel.cs" />
     <Compile Include="ViewModels\ScreenViewModels\TroopsViewModel.cs" />
     <Compile Include="ViewModels\SluggaBoySquadViewModel.cs" />
+    <Compile Include="Views\TotalsView.xaml.cs">
+      <DependentUpon>TotalsView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomControls\TotalsControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,6 +103,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,9 +138,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Pictures\40kOrkHeader.jpg" />
   </ItemGroup>

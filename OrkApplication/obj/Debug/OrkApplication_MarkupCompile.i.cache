@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\App.xaml
-2-443221826
+4-2079415081
 
-19200236140
+221975857453
 20-539882475
-MainWindow.xaml;Styles\TextBoxStyles.xaml;
+CustomControls\TotalsControls.xaml;MainWindow.xaml;Styles\TextBoxStyles.xaml;Views\TotalsView.xaml;
 
 True
 

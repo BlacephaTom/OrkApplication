@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OrkApplication"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:TroopViewModel="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
-        
+        xmlns:TotalsVM="clr-namespace:OrkApplication.Views"
         mc:Ignorable="d"
         Title="MainWindow"
         ResizeMode="CanResize"
@@ -18,8 +18,16 @@
             <ImageBrush ImageSource="Resources/Pictures/40kOrkHeader.jpg"
                         Opacity="0.5"/>
         </DockPanel.Background>
-
         <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto"
+                      DockPanel.Dock="Right"
+                      MaxWidth="150"
+                      MinWidth="100">
+            <ScrollViewer.Content>
+                <TotalsVM:TotalsView/>
+            </ScrollViewer.Content>
+        </ScrollViewer>
+        <!--<ScrollViewer HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto"
                       DockPanel.Dock="Right"
                       MaxWidth="150"
@@ -55,7 +63,7 @@
                     
                 </StackPanel>
             </StackPanel>
-        </ScrollViewer>
+        </ScrollViewer>-->
         
         
         <mah:MetroTabControl Background="{x:Null}"

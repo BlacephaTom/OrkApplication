@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="OrkApplication.Views.TotalsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrkApplication.Views"
+      xmlns:TotalsVM="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
+      mc:Ignorable="d"
+      Background="Transparent">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto"
+                      DockPanel.Dock="Right"
+                      MaxWidth="150"
+                      MinWidth="100">
+        <ScrollViewer.DataContext>
+            <TotalsVM:TotalsViewModel/>
+        </ScrollViewer.DataContext>
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}"
+                       x:Key="SubtitleStyle">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Margin" Value="0,5,0,5"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock FontWeight="Bold"
+                       Margin="0,9,0,0"
+                       HorizontalAlignment="Center">
+                    <Span><Underline>Totals</Underline></Span>
+            </TextBlock>
+            <TextBlock Style="{StaticResource SubtitleStyle}">
+                <Span><Underline>HQ</Underline></Span>
+            </TextBlock>
+            <StackPanel>
+                <ItemsControl ItemsSource="{Binding Path=HQColl, Mode=OneWay}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding HQTitle}"
+                                           FontWeight="Bold"/>
+                                <TextBlock Text="{Binding HQPoints}"
+                                           HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <Separator/>
+            <TextBlock Style="{StaticResource SubtitleStyle}">
+                <Span><Underline>Troops</Underline></Span>
+            </TextBlock>
+            <StackPanel>
+                <ItemsControl ItemsSource="{Binding Path=TroopColl, Mode=OneWay}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding TroopName}"
+                                           FontWeight="Bold"/>
+                                <TextBlock Text="{Binding TroopPoints}"
+                                           HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <Separator/>
+            
+            
+            <TextBlock Text="Elites"
+                       Style="{StaticResource SubtitleStyle}"/>
+           
+            
+            
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

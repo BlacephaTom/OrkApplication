@@ -13,7 +13,6 @@ C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.cspr
 C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.csproj.CoreCompileInputs.cache
 C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.exe
 C:\Users\tomgo\VisualStudioProjects\OrkApplication\obj\Debug\OrkApplication.pdb
-C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csprojAssemblyReference.cache
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\MainWindow.g.cs
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\App.g.cs
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication_MarkupCompile.cache
@@ -42,3 +41,7 @@ C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\Microsoft.Xaml.B
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\de\MahApps.Metro.resources.dll
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\App.baml
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csproj.CopyComplete
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TotalsView.g.cs
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\CustomControls\TotalsControls.baml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TotalsView.baml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csprojAssemblyReference.cache
