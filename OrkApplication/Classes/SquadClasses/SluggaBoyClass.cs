@@ -1,38 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using OrkApplication.Structs;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OrkApplication.Classes.OrkEventArgs;
-
-using System.Collections;
 
 namespace OrkApplication.Classes.SquadClasses
 {
-    public class SluggaBoyClass : IComparable, IComparable<SluggaBoyClass>
+    public class SluggaBoyzClass : IComparable, IComparable<SluggaBoyzClass>
     {
         protected int BaseTenNumber;
 
-        public string Name { get; set; }
+        public ObservableCollection<SluggaBoy> SquadMembers = new ObservableCollection<SluggaBoy>();
+        
+        public int TotalSquadPoints
+        {
+            get
+            {
+                return SquadMembers.Sum(x => x.PointCost);
+            }
+        }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Compare to higher points cost troops
         public int CompareTo(object obj)
         {
 
             // negative if instance is less than passed in value
             // 0 if equal
             // positive if greater than value
-            SluggaBoyClass sluggaBoyClass = obj as SluggaBoyClass;
+            SluggaBoyzClass sluggaBoyClass = obj as SluggaBoyzClass;
             if (sluggaBoyClass != null)
                 return this.BaseTenNumber.CompareTo(sluggaBoyClass.BaseTenNumber);
             else
                 throw new ArgumentException("Object passed through was not a Sluggs Boy");
         }
 
-        public int CompareTo(SluggaBoyClass sluggaBoyClass)
+        public int CompareTo(SluggaBoyzClass sluggaBoyClass)
         {
             // Compare this class with that of one passed in
             return this.CompareTo(sluggaBoyClass);

@@ -27,8 +27,8 @@ namespace OrkApplication.ViewModels
             CurrentSquadMembers = 0;
         }
 
-        private List<SluggaBoyClass> _SluggaBoySquad;
-        public List<SluggaBoyClass> SluggaBoySquad
+        private List<SluggaBoyzClass> _SluggaBoySquad;
+        public List<SluggaBoyzClass> SluggaBoySquad
         {
             get { return _SluggaBoySquad; }
             set
@@ -38,10 +38,10 @@ namespace OrkApplication.ViewModels
             }
         }
 
-        public SluggaBoyClass this[string Name]
-        {
-            get { return SluggaBoySquad.Where(Ork => Ork.Name == Name).FirstOrDefault(); }
-            set { /* set the specified index to value here */ }
-        }
+        //public SluggaBoyzClass this[string Name]
+        //{
+        //    get { return SluggaBoySquad.Where(Ork => Ork.Name == Name).FirstOrDefault(); }
+        //    set { /* set the specified index to value here */ }
+        //}
     }
 }
