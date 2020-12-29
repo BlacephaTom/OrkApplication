@@ -12,5 +12,10 @@ namespace OrkApplication.Structs
         public int PointCost => 6;
     }
 
+    public struct ShootaBoy
+    {
+        public int PointCost => 6;
+    }
+
 
 }

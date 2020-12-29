@@ -71,6 +71,7 @@
     <Compile Include="BaseApplicationClasses\CommandClass.cs" />
     <Compile Include="BaseApplicationClasses\UpdateUIClass.cs" />
     <Compile Include="Classes\StaticReferences.cs" />
+    <Compile Include="Interfaces\ISquadManagement.cs" />
     <Compile Include="Models\SluggaBoyModel.cs" />
     <Compile Include="Structs\HQStructs.cs" />
     <Compile Include="Structs\TroopStructs.cs" />

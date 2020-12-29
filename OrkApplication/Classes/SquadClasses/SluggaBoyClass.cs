@@ -3,11 +3,16 @@ using System.Collections.ObjectModel;
 using OrkApplication.Structs;
 using System.Linq;
 
+using OrkApplication.Interfaces;
+
 namespace OrkApplication.Classes.SquadClasses
 {
-    public class SluggaBoyzClass : IComparable, IComparable<SluggaBoyzClass>
+    public class SluggaBoyzClass : IComparable, IComparable<SluggaBoyzClass>, ISquadManagement
     {
         protected int BaseTenNumber;
+
+        
+
 
         public ObservableCollection<SluggaBoy> SquadMembers = new ObservableCollection<SluggaBoy>();
         
@@ -20,20 +25,13 @@ namespace OrkApplication.Classes.SquadClasses
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public void AddNewSquadMember(int NumberOfSquadToAdd)
+        {
+            for (int i = 1; i <= NumberOfSquadToAdd; i++)
+            {
+                SquadMembers.Add(new SluggaBoy());
+            }
+        }
 
 
 
@@ -55,7 +53,6 @@ namespace OrkApplication.Classes.SquadClasses
         {
             // Compare this class with that of one passed in
             return this.CompareTo(sluggaBoyClass);
-        }
-
+        } 
     }
 }

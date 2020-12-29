@@ -11,7 +11,23 @@ namespace OrkApplication.ViewModels.ScreenViewModels
     {
 
         public ObservableCollection<HQClass> HQColl { get; set; }
-        public ObservableCollection<TroopClass> TroopColl { get; set; }
+
+        private ObservableCollection<TroopClass> _TroopColl;
+        public ObservableCollection<TroopClass> TroopColl
+        {
+            get
+            {
+                return _TroopColl;
+            }
+            set
+            {
+                _TroopColl = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
 
         public TotalsViewModel()
         {
@@ -19,20 +35,7 @@ namespace OrkApplication.ViewModels.ScreenViewModels
                 new HQClass("Thrakka", 189),
                 new HQClass("Boss", 45)
             };
-
-            TroopColl = new ObservableCollection<TroopClass>() {
-                new TroopClass("Slugga Boyz", 150),
-                new TroopClass("Shoota Boyz", 130)
-            };
-
         }
-
-
-
-
-
-
-
     }
 
 
