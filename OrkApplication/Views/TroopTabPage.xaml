@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="OrkApplication.Views.TroopTabPage"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:OrkApplication.Views"
+             xmlns:TroopPageViewModel="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
+             mc:Ignorable="d"
+          d:DesignHeight="450" 
+          d:DesignWidth="800"   
+          Background="Transparent">
+    <Grid>
+        <Grid.DataContext>
+            <TroopPageViewModel:TroopsViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Margin" Value="0,0,0,5"/>
+                </Style>
+            </StackPanel.Resources>
+            <Label Content="Squad Type"/>
+            <ComboBox ItemsSource="{Binding ListOfTroops}"
+                      SelectedValue="{Binding Path=SelectedTroop, 
+                                            Mode=OneWayToSource, 
+                                            UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Content="Number in Squad"/>
+            <mah:NumericUpDown Maximum="{Binding Path=SquadMax, 
+                                                Mode=OneWay}"
+                                Minimum="{Binding Path=SquadMin,
+                                                Mode=OneWay}"
+                                Value="{Binding Path=SquadNumbersToAdd}"
+                                Interval="1"
+                                Background="{x:Null}"
+                                Speedup="False"
+                                InterceptMouseWheel="True"
+                                HorizontalAlignment="Left"
+                                Margin="0,0,0,5"/>
+            <Label Content="{Binding Path=TroopLeaderType, Mode=OneWay}"
+                   Opacity="100"/>
+            <Label Content="War Gear"/>
+            <Button Content="Add Troop"
+                    Command="{Binding AddTroopToArmyICmd}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

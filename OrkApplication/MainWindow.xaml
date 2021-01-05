@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrkApplication"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:TroopViewModel="clr-namespace:OrkApplication.ViewModels.ScreenViewModels"
-        xmlns:TotalsVM="clr-namespace:OrkApplication.Views"
+        xmlns:ViewsFolder="clr-namespace:OrkApplication.Views"
         mc:Ignorable="d"
         Title="MainWindow"
         ResizeMode="CanResize"
         Height="450"
         Width="800">
     <DockPanel LastChildFill="True">
-
         <DockPanel.Background>
             <ImageBrush ImageSource="Resources/Pictures/40kOrkHeader.jpg"
                         Opacity="0.5"/>
@@ -24,7 +22,7 @@
                       MaxWidth="150"
                       MinWidth="100">
             <ScrollViewer.Content>
-                <TotalsVM:TotalsView/>
+                <ViewsFolder:TotalsView/>
             </ScrollViewer.Content>
         </ScrollViewer>
         <!--<ScrollViewer HorizontalScrollBarVisibility="Disabled"
@@ -64,21 +62,26 @@
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>-->
-        
-        
+
         <mah:MetroTabControl Background="{x:Null}"
-                    DockPanel.Dock="Left"
-                    BorderBrush="{x:Null}">
+                             DockPanel.Dock="Left"
+                             BorderBrush="{x:Null}">
             <TabControl.Resources>
                 <Style TargetType="{x:Type mah:MetroTabItem}">
                     <Setter Property="mah:HeaderedControlHelper.HeaderFontSize" Value="15"/>
                 </Style>
             </TabControl.Resources>
             <mah:MetroTabItem Header="Troops">
-                <TabItem.DataContext>
-                    <TroopViewModel:TroopsViewModel/>
-                </TabItem.DataContext>
-                <Grid>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                              VerticalScrollBarVisibility="Auto"
+                              HorizontalAlignment="Left"
+                              MaxWidth="150"
+                              MinWidth="100">
+                    <ScrollViewer.Content>
+                        <ViewsFolder:TroopTabPage/>
+                    </ScrollViewer.Content>
+                </ScrollViewer>
+                <!--<Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -114,13 +117,7 @@
                         <Button Content="Add Troop"
                                 Command="{Binding AddTroopToArmyICmd}"/>
                     </StackPanel>
-                </Grid>
-               
-                
-                
-                
-                
-                
+                </Grid>-->
             </mah:MetroTabItem>
 
 

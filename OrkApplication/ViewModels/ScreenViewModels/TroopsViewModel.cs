@@ -10,24 +10,68 @@ using OrkApplication.Interfaces;
 
 namespace OrkApplication.ViewModels.ScreenViewModels
 {
-    public class TroopsViewModel
+    public class TroopsViewModel : BaseSquadClass
     {
         public CommandClass AddTroopToArmyICmd => new CommandClass(AddTroopToArmy);
         private SluggaBoyzClass _SluggaboyzClass = new SluggaBoyzClass();
+
+        public Dictionary<string, string> TroopHierarchyDict = new Dictionary<string, string>()
+        {
+            { "Slugga Boyz", "Slugga Boy Nob" },
+            { "Burna Boyz", "Mek" }
+        };
 
         public List<string> ListOfTroops
         {
             get
             {
-                return new List<string>()
-                {
-                    { "Slugga Boyz" },
-                    { "Shoota Boyz" }
-                };
+                return TroopHierarchyDict.Keys.ToList();
             }
         }
 
-        public string SelectedTroop { get; set; }
+        public List<string> ListOfTroopLeaders
+        {
+            get
+            {
+                return TroopHierarchyDict.Values.ToList();
+            }
+        }
+
+        private string _SelectedTroop;
+        public string SelectedTroop
+        {
+            get
+            {
+                return _SelectedTroop;
+            }
+            set
+            {
+                if (_SelectedTroop != value)
+                {
+                    _SelectedTroop = value;
+                    if (TroopHierarchyDict.ContainsKey(_SelectedTroop))
+                        TroopLeaderType = TroopHierarchyDict[_SelectedTroop];
+
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _TroopLeaderType;
+        public string TroopLeaderType
+        {
+            get
+            {
+                return _TroopLeaderType;
+            }
+            set
+            {
+                _TroopLeaderType = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public int SquadNumbersToAdd { get; set; }
 
 

@@ -81,6 +81,9 @@
     <Compile Include="Views\TotalsView.xaml.cs">
       <DependentUpon>TotalsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TroopTabPage.xaml.cs">
+      <DependentUpon>TroopTabPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="CustomControls\TotalsControls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TotalsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TroopTabPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

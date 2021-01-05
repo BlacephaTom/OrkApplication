@@ -45,3 +45,5 @@ C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TotalsView
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\CustomControls\TotalsControls.baml
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TotalsView.baml
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csprojAssemblyReference.cache
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TroopTabPage.g.cs
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TroopTabPage.baml
