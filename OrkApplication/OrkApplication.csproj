@@ -70,8 +70,12 @@
     </ApplicationDefinition>
     <Compile Include="BaseApplicationClasses\CommandClass.cs" />
     <Compile Include="BaseApplicationClasses\UpdateUIClass.cs" />
+    <Compile Include="Classes\SquadClasses\Troops\ShootaBoyClass.cs" />
     <Compile Include="Classes\StaticReferences.cs" />
     <Compile Include="Interfaces\ISquadManagement.cs" />
+    <Compile Include="MessageBoxWindow.xaml.cs">
+      <DependentUpon>MessageBoxWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\SluggaBoyModel.cs" />
     <Compile Include="Structs\HQStructs.cs" />
     <Compile Include="Structs\TroopStructs.cs" />
@@ -102,11 +106,15 @@
     <Compile Include="Classes\OrkEventArgs\TooManySquadMembersEventArgs.cs" />
     <Compile Include="Classes\SquadClasses\BaseSquadClass.cs" />
     <Compile Include="Classes\SquadClasses\FlashGitzClass.cs" />
-    <Compile Include="Classes\SquadClasses\SluggaBoyClass.cs" />
+    <Compile Include="Classes\SquadClasses\Troops\SluggaBoyClass.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -147,7 +155,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Factories\OrkSquadCreationFactoryMethod\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Pictures\40kOrkHeader.jpg" />
   </ItemGroup>

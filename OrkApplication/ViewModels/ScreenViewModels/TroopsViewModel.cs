@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using OrkApplication.Classes.SquadClasses;
+using OrkApplication.Classes.SquadClasses.Troops;
 using OrkApplication.BaseApplicationClasses;
 using OrkApplication.Interfaces;
 
@@ -17,9 +18,16 @@ namespace OrkApplication.ViewModels.ScreenViewModels
 
         public Dictionary<string, string> TroopHierarchyDict = new Dictionary<string, string>()
         {
+            // TODO Get values from Slugga boy class
             { "Slugga Boyz", "Slugga Boy Nob" },
             { "Burna Boyz", "Mek" }
         };
+
+        //public List<Type> TroopClasses = new List<Type>()
+        //{
+        //    SluggaBoyzClass,
+        //    new ShootaBoyClass()
+        //};
 
         public List<string> ListOfTroops
         {

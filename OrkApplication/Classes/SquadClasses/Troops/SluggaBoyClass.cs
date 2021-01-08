@@ -5,17 +5,26 @@ using System.Linq;
 
 using OrkApplication.Interfaces;
 
-namespace OrkApplication.Classes.SquadClasses
+namespace OrkApplication.Classes.SquadClasses.Troops
 {
-    public class SluggaBoyzClass : IComparable, IComparable<SluggaBoyzClass>, ISquadManagement
+    public class SluggaBoyzClass : BaseSquadClass, IComparable, IComparable<SluggaBoyzClass>, ISquadManagement
     {
         protected int BaseTenNumber;
 
-        
-
+        public string SquadLeaderType = "Slugga Boy Nob";
+        public string SquadName = "Slugga Boyz";
 
         public ObservableCollection<SluggaBoy> SquadMembers = new ObservableCollection<SluggaBoy>();
-        
+
+
+        public SluggaBoyzClass()
+        {
+            delTooFewSquadMembers += (object sender, OrkEventArgs.TooFewSquadMembersEventArgs e) =>
+            {
+                MessageBoxWindow MsgBoxWindow = new MessageBoxWindow(OrkApplication.App.Current.MainWindow, e.Message);
+            };
+        }
+
         public int TotalSquadPoints
         {
             get
@@ -33,6 +42,8 @@ namespace OrkApplication.Classes.SquadClasses
             }
         }
 
+
+        
 
 
         //Compare to higher points cost troops

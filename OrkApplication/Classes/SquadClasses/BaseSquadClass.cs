@@ -41,14 +41,6 @@ namespace OrkApplication.Classes.SquadClasses
                 delTooFewSquadMembers?.Invoke(this, new TooFewSquadMembersEventArgs($"This squad must have at least {MinimumSquadMembers} Orks in it!"));
             }
         }
-
-
-        public enum SquadLeaders
-        {
-            Nob,
-            Mek,
-            Captain
-        }
     }
 
     static class ExtensionHelpers
