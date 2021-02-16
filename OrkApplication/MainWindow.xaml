@@ -6,11 +6,15 @@
         xmlns:local="clr-namespace:OrkApplication"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:ViewsFolder="clr-namespace:OrkApplication.Views"
+                 xmlns:ViewModelsFolder="clr-namespace:OrkApplication.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
         ResizeMode="CanResize"
         Height="450"
         Width="800">
+    <mah:MetroWindow.DataContext>
+        <ViewModelsFolder:MainWindowViewModel/>
+    </mah:MetroWindow.DataContext>
     <DockPanel LastChildFill="True">
         <DockPanel.Background>
             <ImageBrush ImageSource="Resources/Pictures/40kOrkHeader.jpg"
@@ -20,10 +24,11 @@
                       VerticalScrollBarVisibility="Auto"
                       DockPanel.Dock="Right"
                       MaxWidth="150"
-                      MinWidth="100">
-            <ScrollViewer.Content>
-                <ViewsFolder:TotalsView/>
-            </ScrollViewer.Content>
+                      MinWidth="100"
+                      Content="{Binding Path=TotalsViewUI}">
+            <!--<ScrollViewer.Content>
+                
+            </ScrollViewer.Content>-->
         </ScrollViewer>
         <!--<ScrollViewer HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto"
@@ -72,11 +77,12 @@
                 </Style>
             </TabControl.Resources>
             <mah:MetroTabItem Header="Troops">
+                <mah:MetroTabItem.DataContext>
+                    <Binding Path="TabViewModel"/>
+                </mah:MetroTabItem.DataContext>
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled"
                               VerticalScrollBarVisibility="Auto"
-                              HorizontalAlignment="Left"
-                              MaxWidth="150"
-                              MinWidth="100">
+                              HorizontalAlignment="Left">
                     <ScrollViewer.Content>
                         <ViewsFolder:TroopTabPage/>
                     </ScrollViewer.Content>

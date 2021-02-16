@@ -9,12 +9,59 @@ using OrkApplication.Classes.SquadClasses.Troops;
 using OrkApplication.BaseApplicationClasses;
 using OrkApplication.Interfaces;
 
+using MoreLinq;
+
 namespace OrkApplication.ViewModels.ScreenViewModels
 {
-    public class TroopsViewModel : BaseSquadClass
+    public class TroopsViewModel : UpdateUIClass
     {
         public CommandClass AddTroopToArmyICmd => new CommandClass(AddTroopToArmy);
-        private SluggaBoyzClass _SluggaboyzClass = new SluggaBoyzClass();
+
+       //public List<SquadMembers<Structs.SluggaBoy>> EachMember = new List<SquadMembers<Structs.SluggaBoy>>();
+
+        public List<Structs.SluggaBoy> SquadMembers = new List<Structs.SluggaBoy>();
+       //public int TotalOfEachSquadToAdd { get; set; }
+        public int SquadNumbersToAdd { get; set; }
+
+
+        public TroopsViewModel()
+        {
+
+
+
+
+        }
+
+
+
+
+        private void AddTroopToArmy()
+        {
+            for(int i = 1; i <= SquadNumbersToAdd; i ++)
+            {
+                SquadMembers.Add(new Structs.SluggaBoy());
+            }
+        }
+
+        public int ReturnTotalTroopPoints
+        {
+            get
+            {
+                System.Windows.MessageBox.Show($"worth {SquadMembers.Sum(x => x.PointsPerModel)} points");
+                if (SquadMembers.Any())
+                    return SquadMembers.Sum(x => x.PointsPerModel); //SquadMembers.Count() * (int)SquadMembers.Select(x => x.PointsPerModel).FirstOrDefault();
+                else
+                    return 0;
+            }
+        }
+
+        
+
+
+
+
+
+
 
         public Dictionary<string, string> TroopHierarchyDict = new Dictionary<string, string>()
         {
@@ -79,13 +126,6 @@ namespace OrkApplication.ViewModels.ScreenViewModels
             }
         }
 
-
-        public int SquadNumbersToAdd { get; set; }
-
-
-        public void AddTroopToArmy()
-        {
-            _SluggaboyzClass.AddNewSquadMember(SquadNumbersToAdd);
-        }
+       
     }
 }

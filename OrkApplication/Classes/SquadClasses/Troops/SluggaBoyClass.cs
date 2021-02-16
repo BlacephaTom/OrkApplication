@@ -7,7 +7,7 @@ using OrkApplication.Interfaces;
 
 namespace OrkApplication.Classes.SquadClasses.Troops
 {
-    public class SluggaBoyzClass : BaseSquadClass, IComparable, IComparable<SluggaBoyzClass>, ISquadManagement
+    class SluggaBoyzClass : BaseSquadClass, IComparable, IComparable<SluggaBoyzClass>, ISquadManagement
     {
         protected int BaseTenNumber;
 
@@ -23,13 +23,15 @@ namespace OrkApplication.Classes.SquadClasses.Troops
             {
                 MessageBoxWindow MsgBoxWindow = new MessageBoxWindow(OrkApplication.App.Current.MainWindow, e.Message);
             };
+
+            this.MaximumSquadMembers = 30;
         }
 
         public int TotalSquadPoints
         {
             get
             {
-                return SquadMembers.Sum(x => x.PointCost);
+                return SquadMembers.Sum(x => x.PointsPerModel);
             }
         }
 
@@ -41,9 +43,6 @@ namespace OrkApplication.Classes.SquadClasses.Troops
                 SquadMembers.Add(new SluggaBoy());
             }
         }
-
-
-        
 
 
         //Compare to higher points cost troops

@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="OrkApplication.Views.TroopTabPage"
+﻿
+    <UserControl x:Class="OrkApplication.Views.TroopTabPage"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
@@ -9,11 +10,11 @@
              mc:Ignorable="d"
           d:DesignHeight="450" 
           d:DesignWidth="800"   
-          Background="Transparent">
+          Background="White">
     <Grid>
-        <Grid.DataContext>
+        <!--<Grid.DataContext>
             <TroopPageViewModel:TroopsViewModel/>
-        </Grid.DataContext>
+        </Grid.DataContext>-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -43,9 +44,9 @@
                                 Margin="0,0,0,5"/>
             <Label Content="{Binding Path=TroopLeaderType, Mode=OneWay}"
                    Opacity="100"/>
-            <Label Content="War Gear"/>
             <Button Content="Add Troop"
-                    Command="{Binding AddTroopToArmyICmd}"/>
+                    Command="{Binding AddTroopToArmyICmd}"
+                    CommandParameter="{Binding TotalOfEachSquadToAdd}"/>
         </StackPanel>
     </Grid>
 </UserControl>

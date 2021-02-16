@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace OrkApplication.Classes.SquadClasses
 {
-    public class BaseSquadClass : UpdateUIClass
+    public class BaseSquadClass
     {
         public delegate void TooManySquadMembers(object sender, TooManySquadMembersEventArgs e);
         public TooManySquadMembers delTooManySquadMembers;
@@ -19,7 +19,7 @@ namespace OrkApplication.Classes.SquadClasses
         public delegate void TooFewSquadMembers(object sender, TooFewSquadMembersEventArgs e);
         public TooFewSquadMembers delTooFewSquadMembers;
 
-        public int MaximumSquadMembers { get; set; }
+        protected int MaximumSquadMembers { get; set; }
         public int CurrentSquadMembers { get; set; }
         public int MinimumSquadMembers { get; set; }
 
