@@ -27,16 +27,16 @@ namespace OrkApplication.ViewModels
             CurrentSquadMembers = 0;
         }
 
-        private List<SluggaBoyzClass> _SluggaBoySquad;
-        public List<SluggaBoyzClass> SluggaBoySquad
-        {
-            get { return _SluggaBoySquad; }
-            set
-            {
-                _SluggaBoySquad = value;
-                OnPropertyChanged();
-            }
-        }
+        //private List<SluggaBoyzClass> _SluggaBoySquad;
+        //public List<SluggaBoyzClass> SluggaBoySquad
+        //{
+        //    get { return _SluggaBoySquad; }
+        //    set
+        //    {
+        //        _SluggaBoySquad = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         //public SluggaBoyzClass this[string Name]
         //{

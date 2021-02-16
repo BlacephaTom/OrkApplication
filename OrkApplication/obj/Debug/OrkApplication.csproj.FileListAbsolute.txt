@@ -47,3 +47,10 @@ C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TotalsView
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\OrkApplication.csprojAssemblyReference.cache
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TroopTabPage.g.cs
 C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\Views\TroopTabPage.baml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\MessageBoxWindow.g.cs
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\obj\Debug\MessageBoxWindow.baml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MoreLinq.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\System.ValueTuple.dll
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MoreLinq.pdb
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\MoreLinq.xml
+C:\Users\tomgo\GitRepos\OrkApplication\OrkApplication\bin\Debug\System.ValueTuple.xml

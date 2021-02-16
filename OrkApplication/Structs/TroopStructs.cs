@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OrkApplication.Interfaces;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,14 +9,15 @@ using System.Threading.Tasks;
 namespace OrkApplication.Structs
 {
 
-    public struct SluggaBoy
+    public struct SluggaBoy : ISquadPoints
     {
-        public int PointCost => 6;
+        public int PointsPerModel => 6;
+
     }
 
-    public struct ShootaBoy
+    public struct ShootaBoy : ISquadPoints
     {
-        public int PointCost => 6;
+        public int PointsPerModel => 6;
     }
 
 
